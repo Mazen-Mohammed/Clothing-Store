@@ -1,0 +1,20 @@
+<header class="navbar">
+  <div class="brand">
+    <a href="/" aria-label="Clothing Store home">
+      <span class="logo">Placeholder</span>
+      <span class="descriptor">Clothing Store</span>
+    </a>
+  </div>
+
+  <nav class="nav-links">
+    @for (link of links; track link.fragment) {
+      <a
+        [routerLink]="['/']"
+        [fragment]="link.fragment"
+        class="nav-link"
+      >
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+</header>
