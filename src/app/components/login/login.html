@@ -1,0 +1,32 @@
+<div class="login-page">
+    <div class="login-card">
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to continue to Clothing Store</p>
+  
+      <form (ngSubmit)="submit()" autocomplete="on" class="login-form">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required [(ngModel)]="email" />
+  
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          required
+          minlength="4"
+          [(ngModel)]="password"
+        />
+  
+        <button type="submit" class="btn primary full">Sign in</button>
+      </form>
+  
+      <div class="or">or</div>
+  
+      <button class="btn ghost full" (click)="continueAsGuest()">Continue as guest</button>
+  
+      <p class="small muted">
+        No account? <a [routerLink]="['/home']">Continue to home</a>
+      </p>
+    </div>
+  </div>
+  

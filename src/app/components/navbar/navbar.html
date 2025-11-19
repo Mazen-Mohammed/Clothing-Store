@@ -1,16 +1,15 @@
 <header class="navbar">
   <div class="brand">
-    <a href="/" aria-label="Clothing Store home">
+    <a [routerLink]="['/home']" aria-label="Clothing Store home">
       <span class="logo">Placeholder</span>
       <span class="descriptor">Clothing Store</span>
     </a>
   </div>
 
   <nav class="nav-links">
-    @for (link of links; track link.fragment) {
+    @for (link of links; track link.path) {
       <a
-        [routerLink]="['/']"
-        [fragment]="link.fragment"
+        [routerLink]="[link.path]"
         class="nav-link"
       >
         {{ link.label }}

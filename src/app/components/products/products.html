@@ -1,0 +1,21 @@
+<section class="products-page">
+    <h2>Products</h2>
+    <p class="muted">Data from Fake Store API</p>
+  
+    <div class="grid" *ngIf="products$ | async as products; else loading">
+      <article class="card" *ngFor="let p of products">
+        <img [src]="p.image" [alt]="p.title" />
+        <div class="card-body">
+          <h3 title="{{p.title}}">{{ p.title }}</h3>
+          <p class="price">${{ p.price }}</p>
+          <p class="category">{{ p.category }}</p>
+          <a class="btn small" [routerLink]="['/home']">View</a>
+        </div>
+      </article>
+    </div>
+  
+    <ng-template #loading>
+      <p>Loading products…</p>
+    </ng-template>
+  </section>
+  

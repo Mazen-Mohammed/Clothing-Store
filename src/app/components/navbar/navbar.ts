@@ -11,10 +11,11 @@ import { RouterLink } from '@angular/router';
 })
 export class Navbar {
   protected readonly links = [
-    { label: 'New Arrivals', fragment: 'new' },
-    { label: 'Women', fragment: 'women' },
-    { label: 'Men', fragment: 'men' },
-    { label: 'Collections', fragment: 'collections' },
-    { label: 'Stories', fragment: 'stories' },
+    { label: 'Products', path: '/products' },
+    { label: 'New Arrivals', path: '/home' },
+    { label: 'Women', path: '/home' },
+    { label: 'Men', path: '/home' },
+    { label: 'Collections', path: '/home' },
+    { label: 'Stories', path: '/home' },
   ];
 }
