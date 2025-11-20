@@ -1,6 +1,5 @@
 <section class="products-page">
     <h2>Products</h2>
-    <p class="muted">Data from Fake Store API</p>
   
     <div class="grid" *ngIf="products$ | async as products; else loading">
       <article class="card" *ngFor="let p of products">
